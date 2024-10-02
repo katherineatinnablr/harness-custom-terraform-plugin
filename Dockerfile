@@ -12,3 +12,7 @@ RUN curl -LO "https://github.com/kubernetes-sigs/kustomize/releases/download/kus
     && tar xzf kustomize_v5.3.0_linux_amd64.tar.gz \
     && mv kustomize /usr/local/bin/kustomize \
     && rm kustomize_v5.3.0_linux_amd64.tar.gz
+RUN curl "https://releases.hashicorp.com/terraform/0.12.31/terraform_0.12.31_linux_amd64.zip" -o "tf012.zip"
+RUN unzip tf012.zip
+RUN install -o root -g root -m 0755 terraform /usr/local/bin/terraform
+RUN terraform version
