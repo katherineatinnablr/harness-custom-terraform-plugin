@@ -20,9 +20,9 @@ jobs:
       matrix:
         include:
           - dockerfile: ./Dockerfile_012
-            image: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}_012
+            image: ghcr.io/katherineatinnablr/harness-custom-terraform-plugin_012
           - dockerfile: ./Dockerfile_013
-            image: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}_013
+            image: ghcr.io/katherineatinnablr/harness-custom-terraform-plugin_013
     # Sets the permissions granted to the `GITHUB_TOKEN` for the actions in this job.
     permissions:
       contents: read
